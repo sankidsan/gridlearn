@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="item header">Header</div>
+  <div class="item sidebar">Sidebar</div>
+  <div class="item content">Main Content</div>
+  <div class="item footer">Footer</div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: [first] 200px [second] 1fr [third] 200px [end];
+    grid-template-rows: [top] 100px [middle] auto [bottom] 100px [end];
+    gap: 10px;
+  }
+
+  .header {
+    grid-column: first / end;  /* Full width */
+    grid-row: top / middle;
+    background-color: lightcoral;
+  }
+
+  .sidebar {
+    grid-column: first / second; /* Sidebar in the 1st column */
+    grid-row: middle / bottom;
+    background-color: lightblue;
+  }
+
+  .content {
+    grid-column: second / end; /* Main Content in the rest of the space */
+    grid-row: middle / bottom;
+    background-color: lightgreen;
+  }
+
+  .footer {
+    grid-column: first / end;  /* Full width */
+    grid-row: bottom / end;
+    background-color: lightsalmon;
+  }
+
+  .item {
+    text-align: center;
+    padding: 20px;
+  }
+</style>

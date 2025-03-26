@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Auto Flow - Dense</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 80px);
+            grid-auto-flow: row dense; /* Filling gaps! */
+            border: 2px solid black;
+            gap: 5px;
+        }
+        .item {
+            background: gold;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item1 {
+            grid-row: span 2; /* This item is taller */
+        }
+        .item3 {
+            grid-row: span 2; /* Another tall item */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item item3">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Auto Flow - Dense</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 80px);
+            grid-auto-flow: row dense; /* Try removing 'dense' and check */
+            border: 2px solid black;
+            gap: 5px;
+        }
+        .item {
+            background: gold;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item1 {
+            grid-column: span 2; /* Wider item */
+        }
+        .item3 {
+            grid-row: span 2; /* Taller item */
+        }
+        .item5 {
+            grid-column: span 2; /* Wider item */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item item3">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item item5">Item 5</div>
+        <div class="item">Item 6</div> <!-- This will move up when 'dense' is applied -->
+    </div>
+</body>
+</html>

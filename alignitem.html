@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-items Example</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 80px);
+            border: 2px solid black;
+            height: 300px; /* To visualize alignment */
+             /* Aligns items inside their grid cells */
+             place-items: end center;
+            
+        }
+        .item {
+            background: gold;
+            border: 1px solid black;
+            display: grid;
+         
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+</body>
+</html>

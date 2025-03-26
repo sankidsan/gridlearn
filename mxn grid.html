@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>
+  <style>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 equal columns */
+        grid-template-rows: 100px 200px auto; /* Three rows: fixed 100px, fixed 200px, and auto height */
+        gap: 10px; /* Adds spacing between grid items */
+      }
+      
+      .item {
+        background-color: deepskyblue;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+  </style>
+  

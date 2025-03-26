@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="item header">Header</div>
+    <div class="item sidebar">Sidebar</div>
+    <div class="item content">Main Content</div>
+    <div class="item footer">Footer</div>
+</div>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 
+            [sidebar-start] 200px 
+            [content-start] 1fr 
+            [content-end] 200px 
+            [sidebar-end];
+        grid-template-rows: 
+            [header-start] 100px 
+            [header-end] auto 
+            [footer-start] 100px 
+            [footer-end];
+        gap: 10px;
+    }
+
+    .header {
+        grid-column: sidebar-start / sidebar-end; /* Full width */
+        grid-row: header-start / header-end;
+        background-color: lightcoral;
+    }
+
+    .sidebar {
+        grid-column: sidebar-start / content-start; /* Sidebar */
+        grid-row: header-end / footer-start;
+        background-color: lightblue;
+    }
+
+    .content {
+        grid-column: content-start / sidebar-end; /* Main Content */
+        grid-row: header-end / footer-start;
+        background-color: lightgreen;
+    }
+
+    .footer {
+        grid-column: sidebar-start / sidebar-end; /* Full width */
+        grid-row: footer-start / footer-end;
+        background-color: lightsalmon;
+    }
+</style>

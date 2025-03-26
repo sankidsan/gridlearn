@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="item header">Header</div>
+  <div class="item content">Main Content</div>
+  <div class="item footer">Footer</div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-rows: 100px 200px 100px; /* 3 rows */
+    gap: 10px;
+  }
+
+  .header {
+    grid-row: 1 / 2; /* First row */
+    background-color: lightcoral;
+  }
+
+  .content {
+    grid-row: 2 / 3; /* Second row */
+    background-color: lightgreen;
+  }
+
+  .footer {
+    grid-row: 3 / 4; /* Third row */
+    background-color: lightskyblue;
+  }
+
+  .item {
+    text-align: center;
+    padding: 20px;
+  }
+</style>

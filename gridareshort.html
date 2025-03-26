@@ -1,0 +1,115 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Example</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: [c1]200px [c2]400px [c3] auto[end];
+            grid-template-rows: [r1]200px [r2]400px [r3] auto[rend];
+            
+            
+            gap: 10px;
+        }
+
+        .item {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            border: 1px solid #000;
+        }
+
+        .header {
+            grid-column: c1/end;
+            grid-row: r1/r2;
+            background-color: lightcoral;
+        }
+
+        .sidebar {
+            grid-column: c1/c3;
+            grid-row: r2/r3;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .main {
+            grid-column: c3/end;
+            grid-row: r2/r3;
+            background-color: lightgreen;
+        }
+
+        .footer {
+            grid-column: c1/end;
+            grid-row: r3/rend;
+
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item main">Main Content</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Example</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template:
+                [row1-start] "header header header" 100px [row1-end]
+                [row2-start] "sidebar main main" auto [row2-end]
+                [row3-start] "footer footer footer" 50px [row3-end]
+                / 200px auto auto;
+            gap: 10px;
+        }
+
+        .item {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            border: 1px solid #000;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: lightcoral;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: lightgreen;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item main">Main Content</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>

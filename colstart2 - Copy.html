@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correct Grid Example</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 
+                 1fr 
+                 1fr 
+    1fr 
+                ;  /* ✅ Clearly defines the end */
+            gap: 10px;
+        }
+        .item {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+            border: 1px solid #000;
+        }
+        .special {
+            grid-column:2/4 /* ✅ Starts at second column */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item special">Item 2 (Starts at Column 2)</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>

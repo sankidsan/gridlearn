@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Items Example</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 80px);
+            gap: 10px;
+
+            /* Change this to see different effects */
+            justify-items:center; /* Try: start | end | center | stretch */
+
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        .item {
+            background-color: lightblue;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>justify-items Example</h2>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>

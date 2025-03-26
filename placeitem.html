@@ -1,0 +1,14 @@
+place-items
+place-items sets both the align-items and justify-items properties in a single declaration.
+
+Values:
+
+<align-items> / <justify-items> – The first value sets align-items, the second value justify-items. If the second value is omitted, the first value is assigned to both properties.
+For more details, see align-items and justify-items.
+
+This can be very useful for super quick multi-directional centering:
+
+.center {
+  display: grid;
+  place-items: center;
+}

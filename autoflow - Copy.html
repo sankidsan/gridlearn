@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Auto Flow - Row</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 60px);
+            grid-template-rows: repeat(2, 30px);
+            grid-auto-flow: column; /* Items flow across rows */
+            border: 2px solid black;
+            gap: 5px;
+        }
+        .item {
+            background: gold;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item-a { grid-column: 1; grid-row: 1 / 3; } /* Tall item */
+        .item-e { grid-column: 4; grid-row: 2 / 3; } /* Tall item */
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item item-a">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item item-e">E</div>
+    </section>
+</body>
+</html>
